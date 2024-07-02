@@ -1,0 +1,143 @@
+\documentclass[12 pt, a5paper]{article}% тип документа, размер шрифта
+\usepackage{cmap}  
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	urlcolor=blue,
+}
+\usepackage{mathtext}
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage[export]{adjustbox}
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 2 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage[shortlabels]{enumitem}
+
+\usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{longtable} % Длинные таблицы
+\usepackage{multirow} % Слияние строк в таблице
+\usepackage{colortbl} % Цветная заливка в таблице
+\usepackage[labelsep=period,labelfont=rm,tablename={Таблица},tablewithin=none]{caption}
+\usepackage{makecell} 
+\usepackage{ctable} % for \specialrule command 
+
+\usepackage{fancybox, fancyhdr}
+\pagestyle{fancy} 
+\fancyhead[L]{\textit{6 класс}}
+\fancyhead[C]{\textit{{ЛМШ "Алые паруса"}}}
+\fancyhead[R]{\textit{the second day}} % ЛЮБАЯ ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ
+%\fancyfoot[R]{Задание с двух сторон!}
+\renewcommand{\footrulewidth}{0.3 mm}
+
+\usepackage{tikzsymbols}
+\usepackage{textcomp}
+\usepackage{parskip}
+\usepackage{graphicx}
+\graphicspath{{pictures/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{wrapfig}
+%%% Заголовок
+
+%%% Новые команды
+\newcommand{\z}[1]{{{\vspace{0.6cm} \large\textbf{{Задача {#1}} \\ }}}}
+\newcommand{\task}[1]{{{\vspace{0.6cm} \vspace{-2ex} \textbf{№{#1}}  }}}
+\newcommand{\otv}{{\vspace{0.3cm} \textbf{Решение: } \\}}
+\newcommand{\uk}{\underline{\textit{Указание.}} }
+\newcommand{\opr}{\textit{Определение: }}
+\newcommand{\sol}[1]{{{\vspace{0.3cm} \textbf{{Задача {#1}} }\\ }}}
+\newcommand{\RomanNumeralCaps}[1]
+{\MakeUppercase{\romannumeral #1}}
+
+\usepackage{cancel}
+\setlength\parindent{0pt}
+\setlength\parskip{1ex plus 2pt minus 1pt}
+\newcommand\X{\par\noindent---~}
+\usepackage{ upgreek }
+\begin{document} % конец преамбулы, начало документа
+	\newpage
+	\begin{figure}[t]
+	\begin{minipage}[h]{0.33\linewidth}
+		\includegraphics[width=0.2\linewidth, left]{logo.jpg}
+	\end{minipage}
+	%%	\hfill
+	\begin{minipage}[h]{0.33\linewidth}
+		\centering
+		\large{\textbf{Разнобой}}\\
+	\end{minipage}
+	\begin{minipage}[h]{0.32\linewidth}
+		\includegraphics[width=0.2\linewidth, right]{logo.jpg}
+	\end{minipage}
+	\label{ris:image1}
+\end{figure}
+	
+	\begin{flushright}     
+		\textit{<<Может ли  Всемогущий Бог создать камень, \\
+			который он сам поднять не может?>>}
+	\end{flushright}
+	\begin{comment}
+	\begin{figure}[b]
+		\begin{minipage}[h]{0.5\linewidth}
+			\includegraphics[width=0.2\linewidth, left]{logo.jpg}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[h]{0.5\linewidth}
+			\includegraphics[width=0.2\linewidth, right]{logo.jpg}
+		\end{minipage}
+		\label{ris:image1}
+	\end{figure}
+	\end{comment}
+	
+	\begin{comment}
+		\begin{tabular}{lcr}
+			\includegraphics[width=0.2\linewidth]{logo.jpg} &
+			\vspace{-2ex}
+			\large\textbf{Разнобой} &
+			\includegraphics[width=0.2\linewidth]{logo.jpg}
+		\end{tabular}
+	\end{comment}
+	\centering
+	\raggedright
+	\task{0} Сложите 3 карандаша так, чтобы их носики не касались стола (конструкция должна быть устойчивой).
+	\\
+	\task{1} Как разделить поровну семь одинаковых пирожных между 12 гостями так, чтобы каждое пирожное было
+	разделено не более, чем на 5 частей?
+	\\
+	\task{2} Как с помощью чашечных весов и гирь весом 1, 3, 9, 27, и 81 грамм (использовать каждую можно только один
+	раз) уравновесить груз весом
+	\\ \hspace{1em} a) 31 грамм
+	\\  \hspace{1em} б) 32 грамма
+	\\  \hspace{1em} в) 49 грамм
+	\\
+	\task{3}
+	Студенты, находясь на отдыхе, разрезали арбуз на 4 части и съели. Могло ли получится 5 корок?
+	\\
+	\task{4} Три курицы за три дня несут три яйца. Сколько яиц снесут 12 таких же курей за 12 дней?
+	\\
+	\task{5} Разрежьте квадрат $7 \times 7$ на пять частей и переложите их так, чтобы получились 3 квадрата: $2 \times 2$,  $3 \times 3$ и $6 \times 6$. Постарайтесь сделать это несколькими способами.
+\end{document}

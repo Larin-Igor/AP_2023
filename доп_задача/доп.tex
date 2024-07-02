@@ -1,0 +1,155 @@
+\documentclass[12 pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage{cmap}  
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	urlcolor=blue,
+}
+\usepackage{mathtext}
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage[export]{adjustbox}
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 2 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage[shortlabels]{enumitem}
+
+\usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{longtable} % Длинные таблицы
+\usepackage{multirow} % Слияние строк в таблице
+\usepackage{colortbl} % Цветная заливка в таблице
+\usepackage[labelsep=period,labelfont=rm,tablename={Таблица},tablewithin=none]{caption}
+\usepackage{makecell} 
+\usepackage{ctable} % for \specialrule command 
+
+\usepackage{fancybox, fancyhdr}
+\pagestyle{fancy} 
+\fancyhead[L]{\textit{6 класс}}
+\fancyhead[C]{\textit{{ЛМШ "Алые паруса" 2023}}}
+\fancyhead[R]{\textit{2 день}} % ЛЮБАЯ ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ
+%\fancyfoot[R]{Задание с двух сторон!}
+\renewcommand{\footrulewidth}{0.3 mm}
+
+\usepackage{tikzsymbols}
+\usepackage{textcomp}
+\usepackage{parskip}
+\usepackage{graphicx}
+\graphicspath{{pictures/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{wrapfig}
+%%% Заголовок
+
+%%% Новые команды
+\newcommand{\z}[1]{{{\vspace{0.6cm} \large\textbf{{Задача {#1}} \\ }}}}
+\newcommand{\task}[1]{{{\vspace{0.6cm} \vspace{-2ex} \textbf{№{#1}}  }}}
+\newcommand{\otv}{{\vspace{0.3cm} \textbf{Решение: } \\}}
+\newcommand{\uk}{\underline{\textit{Указание.}} }
+\newcommand{\opr}{\textit{Определение: }}
+\newcommand{\sol}[1]{{{\vspace{0.3cm} \textbf{{Задача {#1}} }\\ }}}
+\newcommand{\RomanNumeralCaps}[1]
+{\MakeUppercase{\romannumeral #1}}
+
+\usepackage{cancel}
+\usepackage{epigraph} 
+\setlength\parindent{0pt}
+\setlength\parskip{1ex plus 2pt minus 1pt}
+\newcommand\X{\par\noindent---~}
+\usepackage{ upgreek }
+\begin{document} % конец преамбулы, начало документа
+	\newpage
+	\large
+	\raggedright
+	\vspace{-2ex}
+	\begin{figure}[H]
+		\begin{minipage}[h]{0.33\linewidth}
+			\includegraphics[width=0.33\linewidth, left]{logo.jpg}
+		\end{minipage}
+		%%  \hfill
+		\begin{minipage}[h]{0.3\linewidth}
+			\centering
+			\large{\textbf{Дополнительная задача}}\\
+		\end{minipage}
+		\begin{minipage}[h]{0.33\linewidth}
+			\includegraphics[width=0.33\linewidth, right]{logo.jpg}
+		\end{minipage}
+		\label{ris:image1}
+	\end{figure}
+	\vspace{-2ex}
+	Имеется три кучки по 40 камней. Петя и Вася ходят по очереди, начинает Петя. За ход надо объединить две кучки, после чего разделить эти камни на четыре кучки. Кто не может сделать ход – проиграл. Кто из играющих (Петя или Вася) может выиграть, как бы ни играл соперник?\\
+	\vspace{4ex}
+		\begin{figure}[H]
+		\begin{minipage}[h]{0.33\linewidth}
+			\includegraphics[width=0.33\linewidth, left]{logo.jpg}
+		\end{minipage}
+		%%  \hfill
+		\begin{minipage}[h]{0.3\linewidth}
+			\centering
+			\large{\textbf{Дополнительная задача}}\\
+		\end{minipage}
+		\begin{minipage}[h]{0.33\linewidth}
+			\includegraphics[width=0.33\linewidth, right]{logo.jpg}
+		\end{minipage}
+		\label{ris:image1}
+	\end{figure}
+	\vspace{-2ex}
+	Имеется три кучки по 40 камней. Петя и Вася ходят по очереди, начинает Петя. За ход надо объединить две кучки, после чего разделить эти камни на четыре кучки. Кто не может сделать ход – проиграл. Кто из играющих (Петя или Вася) может выиграть, как бы ни играл соперник?\\
+	\vspace{4ex}
+		\begin{figure}[H]
+		\begin{minipage}[h]{0.33\linewidth}
+			\includegraphics[width=0.33\linewidth, left]{logo.jpg}
+		\end{minipage}
+		%%  \hfill
+		\begin{minipage}[h]{0.3\linewidth}
+			\centering
+			\large{\textbf{Дополнительная задача}}\\
+		\end{minipage}
+		\begin{minipage}[h]{0.33\linewidth}
+			\includegraphics[width=0.33\linewidth, right]{logo.jpg}
+		\end{minipage}
+		\label{ris:image1}
+	\end{figure}
+	\vspace{-2ex}
+	Имеется три кучки по 40 камней. Петя и Вася ходят по очереди, начинает Петя. За ход надо объединить две кучки, после чего разделить эти камни на четыре кучки. Кто не может сделать ход – проиграл. Кто из играющих (Петя или Вася) может выиграть, как бы ни играл соперник?\\
+	\vspace{4ex}
+	\begin{figure}[H]
+		\begin{minipage}[h]{0.33\linewidth}
+			\includegraphics[width=0.33\linewidth, left]{logo.jpg}
+		\end{minipage}
+		%%  \hfill
+		\begin{minipage}[h]{0.3\linewidth}
+			\centering
+			\large{\textbf{Дополнительная задача}}\\
+		\end{minipage}
+		\begin{minipage}[h]{0.33\linewidth}
+			\includegraphics[width=0.33\linewidth, right]{logo.jpg}
+		\end{minipage}
+		\label{ris:image1}
+	\end{figure}
+	\vspace{-2ex}
+	Имеется три кучки по 40 камней. Петя и Вася ходят по очереди, начинает Петя. За ход надо объединить две кучки, после чего разделить эти камни на четыре кучки. Кто не может сделать ход – проиграл. Кто из играющих (Петя или Вася) может выиграть, как бы ни играл соперник?\\
+	\end{document}

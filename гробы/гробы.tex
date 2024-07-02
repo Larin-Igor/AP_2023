@@ -1,0 +1,146 @@
+\documentclass[12 pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage{cmap}	
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	urlcolor=blue,
+}
+\usepackage{mathtext}
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage[export]{adjustbox}
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 2 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage[shortlabels]{enumitem}
+
+\usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{longtable} % Длинные таблицы
+\usepackage{multirow} % Слияние строк в таблице
+\usepackage{colortbl} % Цветная заливка в таблице
+\usepackage[labelsep=period,labelfont=rm,tablename={Таблица},tablewithin=none]{caption}
+\usepackage{makecell} 
+\usepackage{ctable} % for \specialrule command 
+
+\usepackage{fancybox, fancyhdr}
+\pagestyle{fancy} 
+\fancyhead[L]{\textit{6 класс}}
+\fancyhead[C]{\textit{{ЛМШ "Алые паруса" 2023}}}
+\fancyhead[R]{\textit{перерыв между 2 и 3 ночью}} % ЛЮБАЯ ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ
+%\fancyfoot[R]{Задание с двух сторон!}
+\renewcommand{\footrulewidth}{0.3 mm}
+
+\usepackage{tikzsymbols}
+\usepackage{textcomp}
+\usepackage{parskip}
+\usepackage{graphicx}
+\graphicspath{{pictures/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{wrapfig}
+%%% Заголовок
+
+%%% Новые команды
+\newcommand{\z}[1]{{{\vspace{0.6cm} \large\textbf{{Задача {#1}} \\ }}}}
+\newcommand{\task}[1]{{{\vspace{0.6cm} \vspace{-2ex} \textbf{№{#1}}  }}}
+\newcommand{\otv}{{\vspace{0.3cm} \textbf{Решение: } \\}}
+\newcommand{\uk}{\underline{\textit{Указание.}} }
+\newcommand{\opr}{\textit{Определение: }}
+\newcommand{\sol}[1]{{{\vspace{0.3cm} \textbf{{Задача {#1}} }\\ }}}
+\newcommand{\RomanNumeralCaps}[1]
+{\MakeUppercase{\romannumeral #1}}
+
+\usepackage{cancel}
+\usepackage{epigraph} 
+\setlength\parindent{0pt}
+\setlength\parskip{1ex plus 2pt minus 1pt}
+\newcommand\X{\par\noindent---~}
+\usepackage{ upgreek }
+\begin{document} % конец преамбулы, начало документа
+	\newpage
+	\begin{flushright}
+		\textit{<<Одни, когда видят пропасть, думают о бездне, а другие представляют мост через нее.>>}
+	\end{flushright}
+	\begin{figure}[t]
+		\begin{minipage}[h]{0.33\linewidth}
+			\includegraphics[width=0.33\linewidth, left]{logo.jpg}
+		\end{minipage}
+		%%	\hfill
+		\begin{minipage}[h]{0.33\linewidth}
+			\centering
+			\large{\textbf{ДОП. ЛИСТОК\\ ЗАДАЧИ НА ЛОГИКУ}}\\
+		\end{minipage}
+		\begin{minipage}[h]{0.33\linewidth}
+			\includegraphics[width=0.33\linewidth, right]{logo.jpg}
+		\end{minipage}
+		\label{ris:image1}
+	\end{figure}
+		
+	\begin{comment}
+			\begin{figure}[b]
+			\begin{minipage}[h]{0.33\linewidth}
+				\includegraphics[width=0.33\linewidth, left]{logo.jpg}
+			\end{minipage}
+			%%\hfill
+			\begin{minipage}[h]{0.33\linewidth}
+				\centering
+				\large{\textbf{Удачи \Winkey}}
+			\end{minipage}
+			\begin{minipage}[h]{0.33\linewidth}
+				\includegraphics[width=0.33\linewidth, right]{logo.jpg}
+			\end{minipage}
+			\label{ris:image1}
+		\end{figure}
+		
+		\begin{tabular}{lcr}
+			\includegraphics[width=0.2\linewidth]{logo.jpg} &
+			\vspace{-2ex}
+			\large\textbf{Вступительная работа} &
+			\includegraphics[width=0.2\linewidth]{logo.jpg}
+		\end{tabular}
+	\end{comment}
+	
+	\large
+	\raggedright
+	
+	\task{1} Собрались три попугая — Гриша, Игорь и Кирилл. Один из них всегда говорит правду, другой всегда лжет, а третий — хитрец, он иногда говорит правду, иногда лжет. На вопрос: «Кто Игорь?» — попугаи ответили так: Гриша: — Игорь лжец. Игорь: — Я хитрец! Кирилл: — Он абсолютно честный попугай. Кто же из попугаев честный, кто лжец, а кто хитрец?\\
+	
+	\task{2} В некотором государстве живут граждане трёх типов:\\
+	а) дурак считает всех дураками, а себя умным;\\
+	б) скромный умный про всех знает правильно, а себя считает дураком;\\
+	в) уверенный умный про всех знает правильно, а себя считает умным.\\ В думе – 200 депутатов. Премьер-министр провёл анонимный опрос думцев: сколько умных в этом зале сейчас находится? По данным анкет он не смог узнать количество умных. Но тут из поездки вернулся единственный депутат, не участвовавший в опросе. Он заполнил анкету про всю думу, включая себя, и прочитав её, премьер-министр всё понял. Сколько умных могло быть в думе (включая путешественника)?\\
+	
+	\task{3} У Буратино есть пять монет, ровно одна из них – фальшивая. Какая именно – известно только Коту Базилио. Буратино может выбрать три монеты, одну из них отдать Коту, и за это узнать про другие две, есть ли среди них фальшивая. Буратино знает, что Кот за настоящую монету скажет правду, а за фальшивую – соврёт. Как Буратино определить фальшивую монету среди всех пяти, задав не более трёх вопросов?
+	
+	\task{4} Король решил поощрить группу из n мудрецов. Их поставят в ряд друг за другом (чтобы все смотрели в одном направлении), на каждого наденут чёрную или белую шляпу. Каждый будет видеть шляпы всех впереди стоящих. Мудрецы по очереди (от последнего к первому) назовут цвет (белый или чёрный) и натуральное число по своему выбору.\\
+	\newpage
+	В конце подсчитывается число мудрецов, которые назвали цвет, совпадающий с цветом своей шляпы: ровно столько дней всей группе будут платить надбавку к жалованью. Мудрецам разрешили договориться заранее, как отвечать. При этом мудрецы знают, что ровно k из них безумны (кто именно – им неизвестно). Безумный мудрец называет белый или чёрный цвет и число вне зависимости от договорённостей. Какое максимальное число дней с надбавкой к жалованью могут гарантировать группе мудрецы, независимо от местонахождения безумных в очереди?
+	О том, кто из мудрецов безумец, группа знает; шляпу на своей голове они не видят\\
+	\task{5} На совместной конференции партий лжецов и правдолюбов в президиум было избрано 32 человека, которых рассадили в четыре ряда по 8 человек. В перерыве каждый член президиума заявил, что среди его соседей есть представители обеих партий. Известно, что лжецы всегда лгут, а правдолюбы всегда говорят правду. При каком наименьшем числе лжецов в президиуме возможна описанная ситуация? (Два члена президиума являются соседями, если один из них сидит слева, справа, спереди или сзади от другого.)\\
+
+	
+\end{document} 
